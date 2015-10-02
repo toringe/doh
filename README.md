@@ -3,9 +3,9 @@
 Automate Tugboat processes to start and stop droplets. This makes it very easy to minimize the amount of idle time for your droplets. [Tugboat](https://github.com/pearkes/tugboat) is an awesome tool for interacting with DigitalOcean's API, and can easily be installed on your system with `gem install tugboat`.
 
 ## Prerequisites
-* You need to run `tugboat authorize` before running `doh`. It's important to define you defaults as `doh` will use these instead of asking you. If you what to change your Tugboat configuration, simply edit the `~/.tugboat` file.
+* You need to run `tugboat authorize` before running `doh`. It's important to define your defaults as `doh` will use these instead of asking you every time. If you what to change your Tugboat configuration, simply edit the `~/.tugboat` file.
 
-* You will also need to add your SSH keys (e.g. `~/.ssh/id_rsa.pub`) to you DigitalOcean account (see [here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets) for more info).
+* You will also need to add your SSH keys to you DigitalOcean account (see [here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets) for more info). Add keys for all the host you want to run *doh* from.
 
 ## Usage
 Simply run `doh start <name>` to create or restore a droplet with the specified name. When the process completes it will automatically start a SSH session (as root if the droplet is new, or as your default user if the droplet has been restored).

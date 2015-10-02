@@ -70,7 +70,7 @@ run() {
 
 # Find image ID of snapshot
 setimageid() {
-  images=$( tugboat images | grep -i $name )
+  images=$( tugboat images | grep -i "$name-snapshot" )
   regex="id: ([0-9]+)"
   [[ $images =~ $regex ]]
   imgid=${BASH_REMATCH[1]}
